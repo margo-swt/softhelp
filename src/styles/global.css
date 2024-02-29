@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* CSS */
+:root {
+  font-family: 'Figtree', sans-serif;
+}
+:root {
+  --astro-code-color-text: #ffffff;
+  --astro-code-color-background: #1f1e26;
+  --astro-code-token-constant: #6f71ea;
+  --astro-code-token-string: gray;
+  --astro-code-token-comment: #ffffff60;
+  --astro-code-token-keyword: smoke;
+  --astro-code-token-parameter: #ffffff;
+  --astro-code-token-function: hotpink;
+  --astro-code-token-string-expression: #f78ae0;
+  --astro-code-token-punctuation: #ffffff;
+  --astro-code-token-link: #ffffff;
+}
+
+.prose-styles {
+  @apply text-onyx-400 hover:prose-a:text-white max-w-7xl mt-24 mx-auto prose prose-a:font-semibold prose-a:text-blue-300 prose-headings:font-medium  prose-pre:border prose-pre:border-onyx-800 prose-headings:text-white prose-strong:text-white prose-img:border prose-img:border-onyx-800 prose-h1:font-display prose-img:rounded-3xl prose-img:shadow-massive prose-img:bg-onyx-800 prose-blockquote:text-blue-300 prose-blockquote:border-onyx-800 prose-blockquote:border-l-2 prose-code:text-white prose-table:border-onyx-800;
+}

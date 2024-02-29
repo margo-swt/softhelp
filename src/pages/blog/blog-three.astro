@@ -1,0 +1,65 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import EntriesThree from "@/components/entries/EntriesThree.astro";
+const allPosts = await getCollection("posts");
+---
+<BaseLayout>
+  <section class="relative overflow-hidden">
+    <div
+      class="absolute inset-x-0 top-0 h-96 rotate-180 text-gray-500/20 opacity-60 [mask-image:linear-gradient(to_bottom,transparent,white)]">
+      <svg
+        class="absolute inset-0 h-full w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        ><defs
+          ><pattern
+            id="grid-pattern"
+            width="32"
+            height="32"
+            patternUnits="userSpaceOnUse"
+            x="50%"
+            y="100%"
+            patternTransform="translate(0 -1)"
+            ><path d="M0 32V.5H32" fill="none" stroke="currentColor"
+            ></path></pattern
+          ></defs
+        ><rect width="100%" height="100%" fill="url(#grid-pattern)"></rect></svg
+      >
+    </div>
+    <div
+      class="px-8 pt-32 pb-12 mx-auto md:px-12 lg:px-36 lg:pt-64 max-w-7xl relative">
+      <div
+        class="text-center max-w-xl mx-auto"
+        data-aos="fade-down"
+        data-aos-duration="3000">
+        <h1 class="text-4xl lg:text-6xl text-white font-display">
+          Writings from Aubergine
+        </h1>
+        <p class="text-onyx-300 mt-4">
+          The latest news in tech, freelancing and trends.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="px-8 py-12 mx-auto md:px-12 lg:px-36 max-w-7xl">
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {
+          allPosts
+            .slice(2)
+            .map((post) => (
+              <EntriesThree
+                url={"/posts/" + post.slug}
+                title={post.data.title}
+                description={post.data.description}
+                alt={post.data.title}
+                pubDate={post.data.pubDate.toString().slice(0, 10)}
+                author={post.data.author}
+                image={post.data.image.url}
+              />
+            ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

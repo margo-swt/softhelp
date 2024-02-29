@@ -1,0 +1,27 @@
+---
+const { title, url, description, pubDate, author } = Astro.props;
+---
+
+<li>
+  <a href={url} title={title} class="group">
+    <article class="relative h-full pl-4 border-l border-blue-300">
+      <div class="flex flex-col items-start justify-between flex-1 w-full">
+        <header>
+          <div class="inline-flex text-xs text-onyx-400 space-x-1 items-center">
+            <p>
+              {author}
+            </p>
+            <span aria-hidden="true">&middot;</span>
+            <time datetime="2020-03-16"> {pubDate}</time>
+          </div>
+        </header>
+        <div class="w-full mt-4">
+          <p class="text-xl font-medium leading-6 text-white">{title}</p>
+          <p class="text-base text-onyx-300 line-clamp-3 mt-2">
+            {description}
+          </p>
+        </div>
+      </div>
+    </article>
+  </a>
+</li>
