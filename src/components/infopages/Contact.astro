@@ -33,7 +33,18 @@
               schedule a time to discuss your goals.
             </p>
           </div>
-        </div><form name="contact" method="POST" data-netlify="true">
+        </div><form
+        netlify
+        netlify-honeypot
+        name="feedback"
+        method="POST"
+      >
+      <p class="hidden">
+        <label>
+          Don’t fill this out if you’re human: <input name="bot-field" />
+        </label>
+      </p>
+      <input type="hidden" name="form-name" value="feedback" />
           <div class="mt-12 lg:mt-24 space-y-6">
             <div class="">
               <label class="block font-medium text-sm text-white" name="name"
