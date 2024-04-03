@@ -13,11 +13,16 @@
   "dependencies": {
     "@astrojs/mdx": "^2.0.3",
     "@astrojs/preact": "^3.1.0",
+    "@astrojs/react": "^3.1.1",
     "@astrojs/rss": "^4.0.1",
     "@astrojs/sitemap": "^3.0.4",
     "@astrojs/tailwind": "^5.1.0",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.23",
     "astro": "^4.1.1",
-    "preact": "^10.19.3"
+    "preact": "^10.19.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",

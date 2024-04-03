@@ -2,6 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+
+// https://astro.build/config
 export default defineConfig({
   markdown: {
     drafts: true,
@@ -15,5 +18,5 @@ export default defineConfig({
     drafts: true
   },
   site: 'https://softhelp.tips',
-  integrations: [tailwind(),   sitemap(), mdx()]
+  integrations: [tailwind(), sitemap(), mdx(), react()]
 });
