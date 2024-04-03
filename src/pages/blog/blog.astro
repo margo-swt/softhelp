@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import EntriesOne from "@/components/entries/EntriesOne.astro";
+import EntriesTwo from "@/components/entries/EntriesTwo.astro";
 const allPosts = await getCollection("posts");
 ---
 <BaseLayout>
@@ -29,26 +29,26 @@ const allPosts = await getCollection("posts");
     <div
       class="px-8 pt-32 pb-12 mx-auto md:px-12 lg:px-36 lg:pt-64 max-w-7xl relative">
       <div
-        class="text-center max-w-xl mx-auto"
+        class="max-w-xl mx-auto"
         data-aos="fade-down"
         data-aos-duration="3000">
         <h1 class="text-4xl lg:text-6xl text-white font-display">
-          Writings from Aubergine
+          Writings from SoftHelp
         </h1>
         <p class="text-onyx-300 mt-4">
-          The latest news in tech, freelancing and trends.
+          The latest news in tech, QA and DevOps.
         </p>
       </div>
     </div>
   </section>
   <section>
     <div class="px-8 py-12 mx-auto md:px-12 lg:px-36 max-w-7xl">
-      <ul class="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-4">
+      <ul class="grid grid-cols-1 max-w-xl mx-auto gap-12 lg:gap-24">
         {
           allPosts
             .slice()
             .map((post) => (
-              <EntriesOne
+              <EntriesTwo
                 url={"/posts/" + post.slug}
                 title={post.data.title}
                 description={post.data.description}

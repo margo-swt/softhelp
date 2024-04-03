@@ -16,6 +16,14 @@ const postsCollection = defineCollection({
     })
  });
 
+ const servicesCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  })
+});
+
 export const collections = {
   posts: postsCollection,
+  services: servicesCollection,
 };
