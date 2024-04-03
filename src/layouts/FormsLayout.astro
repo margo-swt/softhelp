@@ -5,8 +5,42 @@ import BaseHead from "@/components/BaseHead.astro";
 <html lang="en" class="selection:bg-blue-500 selection:text-white">
   <head>
     <BaseHead />
+    <style>
+      .back-to-home {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        background-color: #ffffff;
+        color: #000;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        z-index: 1000;
+        text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      .back-to-home:hover {
+        background-color: #e2e2e2;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      }
+      .back-to-home svg {
+        margin-right: 8px;
+        fill: #000;
+      }
+    </style>
   </head>
   <body class="bg-onyx-950">
+    <a href="/" class="back-to-home" aria-label="Back to Home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 11H7.414l5.293-5.293-1.414-1.414L3.586 12l7.707 7.707 1.414-1.414L7.414 13H19v-2z"/></svg>
+      Back to Home
+    </a>
     <slot />
   </body>
 </html>
