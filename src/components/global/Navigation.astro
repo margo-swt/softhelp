@@ -1,62 +1,58 @@
 <div class="fixed inset-x-0 top-2 lg:top-8 z-50">
   <div class="mx-auto px-8 lg:max-w-3xl">
     <div
-      class="flex flex-col backdrop-blur-xl backdrop-filter bg-onyx-900/60 border border-onyx-800 md:flex-row md:items-center md:justify-between mx-auto p-2 relative lg:rounded-2xl rounded-xl shadow-massive w-full"
-      x-data="{ open: false }">
+        class="flex flex-col backdrop-blur-xl backdrop-filter bg-onyx-900/60 border border-onyx-800 md:flex-row md:items-center md:justify-between mx-auto p-2 relative lg:rounded-2xl rounded-xl shadow-massive w-full"
+        x-data="{ open: false }">
       <div class="items-center flex flex-row justify-between md:justify-start">
         <a
-          class="text-white inline-flex text-xs items-center font-display pl-2 hover:text-white/50"
-          href="/">
+            class="text-white inline-flex text-xs items-center font-display pl-2 hover:text-white/50"
+            href="/">
           <img alt="logo" class="h-12" src="/logos/softhelp.svg" />
-        </a><button
-          @click="open = !open"
-          class="text-zinc-400 inline-flex focus:outline-none focus:text-white hover:text-accent-300 items-center justify-center md:hidden p-2"
-          ><svg
+        </a>
+        <button
+            @click="open = !open"
+            class="text-zinc-400 inline-flex focus:outline-none focus:text-white hover:text-accent-300 items-center justify-center md:hidden p-2"
+        ><svg
             class="h-6 w-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
-            ><path
-              d="M4 6h16M4 12h16M4 18h16"
-              :class="{'hidden': open, 'inline-flex': !open }"
-              class="inline-flex"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"></path><path
-              d="M6 18L18 6M6 6l12 12"
-              :class="{'hidden': !open, 'inline-flex': open }"
-              class="hidden"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"></path></svg
-          ></button
-        >
-      </div><nav
-        class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0 py-12"
-        :class="{'flex': open, 'hidden': !open}">
-        <ul
-          class="items-center gap-3 justify-center list-none md:inline-flex md:ml-auto md:space-y-0 md:text-left space-y-2 text-center">
-          <!-- <li>
-            <a
-              class="px-2 py-10 text-xs text-white hover:text-blue-300"
-              href="/system/overview">About us</a
-            >
-          </li>
-          <li>
-            <a
-              class="px-2 py-10 text-xs text-white hover:text-blue-300"
-              href="/system/styleguide">Services</a
-            >
-          </li> -->
-          <li>
-            <a
-              class="inline-flex items-center px-4 py-2 text-xs text-onyx-950 text-center transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-tr from-blue-500 via-blue-400 to-blue-300 hover:to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-300"
-              href="/contact"
-              >Contact us</a
-            >
-          </li>
-        </ul>
+        ><path
+            d="M4 6h16M4 12h16M4 18h16"
+            :class="{'hidden': open, 'inline-flex': !open }"
+            class="inline-flex"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"></path><path
+            d="M6 18L18 6M6 6l12 12"
+            :class="{'hidden': !open, 'inline-flex': open }"
+            class="hidden"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"></path></svg
+        ></button>
+      </div>
+      <nav
+          class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0 py-12"
+          :class="{'flex': open, 'hidden': !open}">
+        <a
+            class="text-[#908caa] inline-flex items-center font-sans pl-2 hover:text-[#908caa]/50 justify-center w-full"
+            href="/"
+            style="font-size: 27px;">
+          <img src="/logos/graduate.png" class="h-6 w-6 mr-2" alt="Graduation Hat" />
+          Trainings
+        </a>
+        <a
+            class="text-[#908caa] inline-flex items-center font-sans pl-2 hover:text-[#908caa]/50 justify-center w-full"
+            href="/blog/blog"
+            style="font-size: 27px;">
+          <img src="/logos/blog.png" class="h-6 w-6 mr-2" alt="Graduation Hat" />
+          Blogs
+        </a>
       </nav>
     </div>
   </div>
 </div>
+
+
+<!--#69667D-->
