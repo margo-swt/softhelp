@@ -7,6 +7,29 @@ const currentPath = Astro.url.pathname;
     <div
         class="flex flex-col backdrop-blur-xl backdrop-filter bg-onyx-900/60 border border-onyx-800 md:flex-row md:items-center md:justify-between mx-auto p-2 relative lg:rounded-2xl rounded-xl shadow-massive w-full"
         x-data="{ open: false }">
+      <button
+          @click="open = !open"
+          class="text-zinc-400 inline-flex focus:outline-none focus:text-white hover:text-accent-300 items-center justify-center md:hidden p-2"
+      ><svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+      ><path
+          d="M4 6h16M4 12h16M4 18h16"
+          :class="{'hidden': open, 'inline-flex': !open }"
+          class="inline-flex"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"></path><path
+          d="M6 18L18 6M6 6l12 12"
+          :class="{'hidden': !open, 'inline-flex': open }"
+          class="hidden"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"></path></svg
+      ></button
+      >
       <nav
           class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0 py-12"
           :class="{'flex': open, 'hidden': !open}">
