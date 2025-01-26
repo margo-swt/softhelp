@@ -29,8 +29,8 @@
             <h2 class="text-4xl lg:text-5xl text-white font-display">
               Let's get started!
             </h2><p class="text-onyx-300 mt-4">
-              Complete the details below so we can process your request and then
-              schedule a time to discuss your goals.
+            Complete the details below, specify your request:
+            Consulting or Training.
             </p>
           </div>
         </div><form
@@ -59,14 +59,19 @@
               />
             </div><div class="col-span-full">
               <label class="block font-medium text-sm text-white" for="company"
-                >What is the name of your company / organisation?</label
+                >Choose a service</label
               >
-              <input
+            <select
                 class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                type="text"
                 name="company"
                 required
-              />
+            >
+              <option value="" disabled selected>Services</option>
+              <option value="QA Trainings">QA Trainings</option>
+              <option value="QA Audit & Consulting">QA Audit & Consulting</option>
+              <option value="QA Automation Strategy & Implementation">QA Automation Strategy & Implementation</option>
+              <option value="QA Staffing">QA Staffing</option>
+            </select>
             </div><div class="col-span-full">
               <label class="block font-medium text-sm text-white" for="email"
                 >How shall we contact you?</label
