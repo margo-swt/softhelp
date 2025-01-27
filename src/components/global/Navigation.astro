@@ -1,5 +1,11 @@
 ---
-const currentPath = Astro.url.pathname;
+let currentPath = Astro.url.pathname;
+if (currentPath.endsWith('/')) {
+  currentPath = currentPath.slice(0, -1);
+}
+if (currentPath === '') {
+  currentPath = '/';
+}
 ---
 
 <div class="fixed inset-x-0 top-2 lg:top-8 z-50">
