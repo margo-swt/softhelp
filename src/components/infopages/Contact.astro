@@ -58,12 +58,12 @@
                 required
               />
             </div><div class="col-span-full">
-              <label class="block font-medium text-sm text-white" for="company"
+              <label class="block font-medium text-sm text-white" for="service"
                 >Choose a service</label
               >
             <select
                 class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                name="company"
+                name="service"
                 required
             >
               <option value="" disabled selected>Services</option>
@@ -72,9 +72,10 @@
               <option value="QA Automation Strategy & Implementation">QA Automation Strategy & Implementation</option>
               <option value="QA Staffing">QA Staffing</option>
             </select>
-            </div><div class="col-span-full">
+            </div>
+            <div class="col-span-full">
               <label class="block font-medium text-sm text-white" for="email"
-                >How shall we contact you?</label
+                >Email</label
               >
               <input
                 class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
@@ -83,7 +84,20 @@
                 name="email"
                 required
               />
-            </div><div>
+            </div>
+            <div class="col-span-full">
+              <label class="block font-medium text-sm text-white" for="phone"
+              >Phone Number</label
+              >
+              <input
+                  class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
+                  type="number"
+                  autocomplete="off"
+                  name="number"
+                  required
+              />
+            </div>
+            <div>
               <div>
                 <label
                   class="block font-medium text-sm text-white" for="message"
