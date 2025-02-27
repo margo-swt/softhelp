@@ -17,6 +17,6 @@ export default defineConfig({
     skipInline: false,
     drafts: true
   },
-  site: 'https://softhelp.tips',
+  site: 'https://softfan.net',
   integrations: [tailwind(), sitemap(), mdx(), react()]
 });
