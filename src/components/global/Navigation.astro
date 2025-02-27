@@ -39,22 +39,23 @@ if (currentPath === '') {
       <nav
           class="flex-col md:flex-row flex-grow hidden justify-center md:flex md:items-end md:py-0 py-12"
           :class="{'flex': open, 'hidden': !open}">
+          <a
+          class={`inline-flex items-center font-sans pl-2 justify-center w-full relative ${currentPath === '/' ? 'text-white' : 'text-[#908caa] hover:text-[#908caa]/50'}`}
+          href="/"
+          style="font-size: 27px; top: -5px;">
+        <img src="/logos/graduate.png" class={`h-6 w-6 mr-2 ${currentPath === '/' ? 'filter-white' : 'filter-gray'}`} alt="Graduation Hat" />
+        Trainings
+      </a>
+      <div class="border-l border-onyx-800 h-12 mx-4"></div>
         <a
-            class={`inline-flex items-center font-sans pl-2 justify-center w-full relative ${currentPath === '/' ? 'text-white' : 'text-[#908caa] hover:text-[#908caa]/50'}`}
-            href="/"
+            class={`inline-flex items-center font-sans pl-2 justify-center w-full relative ${currentPath === '/softhelp-consulting' ? 'text-white' : 'text-[#908caa] hover:text-[#908caa]/50'}`}
+            href="/softhelp-consulting"
             style="font-size: 27px; top: -5px;">
-          <img src="/logos/softhelp-cropped.svg" class={`h-6 w-6 mr-2 ${currentPath === '/trainings' ? 'filter-white' : 'filter-gray'}`} alt="Graduation Hat" />
-          SoftHelp
+          <img src="/logos/softhelp-cropped.svg" class={`h-6 w-6 mr-2 ${currentPath === '/softhelp-consulting' ? 'filter-white' : 'filter-gray'}`} alt="Graduation Hat" />
+          Consulting
         </a>
         <div class="border-l border-onyx-800 h-12 mx-4"></div>
-        <a
-            class={`inline-flex items-center font-sans pl-2 justify-center w-full relative ${currentPath === '/trainings' ? 'text-white' : 'text-[#908caa] hover:text-[#908caa]/50'}`}
-            href="/trainings"
-            style="font-size: 27px; top: -5px;">
-          <img src="/logos/graduate.png" class={`h-6 w-6 mr-2 ${currentPath === '/trainings' ? 'filter-white' : 'filter-gray'}`} alt="Graduation Hat" />
-          Trainings
-        </a>
-        <div class="border-l border-onyx-800 h-12 mx-4"></div>
+
         <a
             class={`inline-flex items-center font-sans pl-2 justify-center w-full relative ${currentPath === '/blog/blog' ? 'text-white' : 'text-[#908caa] hover:text-[#908caa]/50'}`}
             href="/blog/blog"
