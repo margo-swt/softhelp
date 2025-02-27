@@ -1,125 +1,78 @@
 <section class="relative overflow-hidden">
-  <div
-    class="absolute inset-x-0 top-0 h-96 rotate-180 text-gray-500/20 opacity-60 [mask-image:linear-gradient(to_bottom,transparent,white)]">
-    <svg
-      class="absolute inset-0 h-full w-full"
-      xmlns="http://www.w3.org/2000/svg"
-      ><defs
-        ><pattern
-          id="grid-pattern"
-          width="32"
-          height="32"
-          patternUnits="userSpaceOnUse"
-          x="50%"
-          y="100%"
-          patternTransform="translate(0 -1)"
-          ><path d="M0 32V.5H32" fill="none" stroke="currentColor"
-          ></path></pattern
-        ></defs
-      ><rect width="100%" height="100%" fill="url(#grid-pattern)"></rect></svg
-    >
+  <div class="absolute inset-x-0 top-0 h-96 rotate-180 text-gray-500/20 opacity-60 [mask-image:linear-gradient(to_bottom,transparent,white)]">
+    <svg class="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid-pattern" width="32" height="32" patternUnits="userSpaceOnUse" x="50%" y="100%" patternTransform="translate(0 -1)">
+          <path d="M0 32V.5H32" fill="none" stroke="currentColor"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid-pattern)"></rect>
+    </svg>
   </div>
-  <div
-    class="flex relative justify-center lg:px-0 max-h-full md:px-12 overflow-hidden">
-    <div
-      class="flex flex-col flex-1 lg:py-24 md:flex-none md:px-28 px-4 py-10 relative sm:justify-center z-10">
+
+  <div class="flex relative justify-center lg:px-0 max-h-full md:px-12 overflow-hidden">
+    <div class="flex flex-col flex-1 lg:py-24 md:flex-none md:px-28 px-4 py-10 relative sm:justify-center z-10">
       <div class="w-full max-w-md">
         <div class="flex flex-col">
           <div>
-            <h2 class="text-4xl lg:text-5xl text-white font-display">
-              Let's get started!
-            </h2><p class="text-onyx-300 mt-4">
-            Complete the details below, specify your request:
-            Consulting or Training.
-            </p>
+            <h2 class="text-4xl lg:text-5xl text-white font-display">Let's get started!</h2>
+            <p class="text-onyx-300 mt-4">Complete the details below, specify your request: Consulting or Training.</p>
           </div>
-        </div><form
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        name="contact"
-        method="POST"
-        action="/success"
-      >
-      <p class="hidden">
-        <label>
-          Don't fill this out if you're human: <input name="bot-field" />
-        </label>
-      </p>
-      <input type="hidden" name="form-name" value="contact" />
+        </div>
+
+        <!-- FORM START -->
+        <form data-netlify="true" data-netlify-honeypot="bot-field" name="contact" method="POST" action="/success">
+          <p class="hidden">
+            <label> Don't fill this out if you're human: <input name="bot-field" /> </label>
+          </p>
+          <input type="hidden" name="form-name" value="contact" />
+
           <div class="mt-12 lg:mt-24 space-y-6">
-            <div class="">
-              <label class="block font-medium text-sm text-white" for="name"
-                >First name</label
-              >
-              <input
-                class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                type="text"
-                name="name"
-                required
-              />
-            </div><div class="col-span-full">
-              <label class="block font-medium text-sm text-white" for="service"
-                >Choose a service</label
-              >
-            <select
-                class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                name="service"
-                required
-            >
-              <option value="" disabled selected>Services</option>
-              <option value="QA Trainings">QA Trainings</option>
-              <option value="QA Audit & Consulting">QA Audit & Consulting</option>
-              <option value="QA Automation Strategy & Implementation">QA Automation Strategy & Implementation</option>
-              <option value="QA Staffing">QA Staffing</option>
-            </select>
-            </div>
-            <div class="col-span-full">
-              <label class="block font-medium text-sm text-white" for="email"
-                >Email</label
-              >
-              <input
-                class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                type="email"
-                autocomplete="off"
-                name="email"
-                required
-              />
-            </div>
-            <div class="col-span-full">
-              <label class="block font-medium text-sm text-white" for="phone"
-              >Phone Number</label
-              >
-              <input
-                  class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                  type="number"
-                  autocomplete="off"
-                  name="number"
-                  required
-              />
-            </div>
+            <!-- First Name -->
             <div>
-              <div>
-                <label
-                  class="block font-medium text-sm text-white" for="message"
-                  >Details</label
-                ><div class="mt-1">
-                  <textarea
-                    required
-                    name="message"
-                    class="block appearance-none mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:outline-none focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 text-lime w-full"
-                    rows="4"></textarea>
-                </div>
-              </div>
-            </div><div class="col-span-full">
-              <div class="">
-                <button
-                  class="inline-flex items-center justify-center w-full px-6 py-3 text-sm text-center duration-500 ease-in-out transform text-onyx-950-700 rounded-xl bg-gradient-to-tr shadow-massive from-indigo-500 via-indigo-400 to-indigo-300 hover:to-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-onyx-900 focus:ring-offset-2 focus:ring-indigo-300 hover:shadow-none"
-                  type="submit">Get started today</button
-                >
-              </div>
+              <label class="block font-medium text-sm text-white" for="name">First name</label>
+              <input class="block mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 w-full" type="text" name="name" required placeholder="Enter your first name" />
+            </div>
+
+            <!-- Service Selection -->
+            <div class="col-span-full">
+              <label class="block font-medium text-sm text-white" for="service">Choose a service</label>
+              <select class="block mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 w-full" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="QA Trainings">QA Trainings</option>
+                <option value="QA Audit & Consulting">QA Audit & Consulting</option>
+                <option value="QA Automation Strategy & Implementation">QA Automation Strategy & Implementation</option>
+                <option value="QA Staffing">QA Staffing</option>
+              </select>
+            </div>
+
+            <!-- Email -->
+            <div class="col-span-full">
+              <label class="block font-medium text-sm text-white" for="email">Email</label>
+              <input class="block mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 w-full" type="email" autocomplete="off" name="email" required placeholder="Enter your email" />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="col-span-full">
+              <label class="block font-medium text-sm text-white" for="phone">Phone Number</label>
+              <input class="block mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 w-full" type="tel" name="phone" required placeholder="Enter your phone number" />
+            </div>
+
+            <!-- Details / Message -->
+            <div>
+              <label class="block font-medium text-sm text-white" for="message">Details</label>
+              <textarea name="message" class="block mt-2 bg-onyx-900 border border-onyx-800 focus:bg-onyx-800 focus:border-blue-300 focus:ring-blue-300 placeholder-onyx-500 px-3 py-2 rounded-md sm:text-sm text-blue-300 w-full" rows="4" required placeholder="Describe your request..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="col-span-full">
+              <button class="inline-flex items-center justify-center w-full px-6 py-3 text-sm text-center duration-500 ease-in-out transform text-white rounded-xl bg-gradient-to-tr from-indigo-500 via-indigo-400 to-indigo-300 hover:to-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-onyx-900 focus:ring-offset-2 focus:ring-indigo-300 hover:shadow-md" type="submit">
+                Get started today
+              </button>
             </div>
           </div>
         </form>
+        <!-- FORM END -->
       </div>
     </div>
   </div>

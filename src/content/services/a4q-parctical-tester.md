@@ -65,7 +65,7 @@ Prepare for A4Q Practical Tester Exam:
 <div class="flex flex-wrap gap-3 mt-12 justify-center">
 <a
     class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 text-sm text-center duration-500 ease-in-out transform rounded-xl bg-gradient-to-tr shadow-massive from-indigo-500 via-indigo-400 to-indigo-300 hover:to-indigo-400 focus:outline-none focus:ring-2 focus:ring-offset-onyx-900 focus:ring-offset-2 focus:ring-indigo-300 hover:shadow-none"
-    href="/contact"
+    href="/contactform"
     style="color: black; text-decoration: none;">REGISTER</a>
 </div>
 
