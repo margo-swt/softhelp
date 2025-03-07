@@ -4,7 +4,11 @@
 /* CSS */
 :root {
   font-family: 'Figtree', sans-serif;
+  font-family: "FiraGO", sans-serif;
 }
+/* .font-sans {
+  font-weight: bold;
+} */
 :root {
   --astro-code-color-text: #ffffff;
   --astro-code-color-background: #1f1e26;

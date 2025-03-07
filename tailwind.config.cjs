@@ -52,7 +52,13 @@ module.exports = {
         "6xl": "5rem",
       },
       fontFamily: {
-        sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+        fontFamily: {
+          sans: ["FiraGO", ...defaultTheme.fontFamily.sans], // Ensure FiraGO or another font is used
+        },
+        fontWeight: {
+          sans: "700", // Make all `font-sans` text bold by default
+        },        
+        serif: ["Noto Serif Georgian", ...defaultTheme.fontFamily.serif], // Add Georgian Serif Font
         display: ["Clash Display", ...defaultTheme.fontFamily.sans],
         mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
